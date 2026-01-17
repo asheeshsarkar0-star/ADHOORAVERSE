@@ -6,98 +6,46 @@
 
 body {
   background: #050508;
-  height: 100vh;
-  overflow: hidden;
   color: #f5e6b8;
-  font-family: 'Montserrat', sans-serif;
-  cursor: none;
+  font-family: 'Playfair Display', serif;
+  overflow-x: hidden;
 }
 
-/* luxury glow cursor */
-.cursor {
-  position: fixed;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: rgba(212,175,55,0.6);
-  pointer-events: none;
-  box-shadow: 0 0 20px rgba(212,175,55,0.8);
-  transform: translate(-50%, -50%);
-  z-index: 9999;
-}
-
-.luxury-bg {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at center, rgba(212,175,55,0.08), transparent 60%);
-  animation: pulse 6s infinite alternate;
-}
-
-@keyframes pulse {
-  from { opacity: 0.3; }
-  to { opacity: 0.8; }
-}
-
-.container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: 1.5s ease;
+}
+
+section.active {
+  opacity: 1;
+  transform: scale(1);
 }
 
 h1 {
-  font-family: 'Playfair Display', serif;
   font-size: 4rem;
   letter-spacing: 8px;
   color: #d4af37;
 }
 
-.tagline {
-  margin-top: 15px;
-  font-size: 1.1rem;
-  opacity: 0.85;
+p {
+  font-size: 1.6rem;
+  margin-top: 20px;
+  max-width: 800px;
 }
 
-button {
-  margin-top: 50px;
-  padding: 14px 50px;
-  background: transparent;
-  border: 1px solid #d4af37;
-  color: #d4af37;
+.sanskrit {
+  font-size: 2rem;
   letter-spacing: 2px;
-  cursor: pointer;
-  transition: 0.4s;
+  color: #d4af37;
 }
 
-button:hover {
-  background: #d4af37;
-  color: #050508;
-  box-shadow: 0 0 30px rgba(212,175,55,0.6);
+.final p {
+  font-size: 2rem;
 }
-
-.whisper {
-  position: absolute;
-  bottom: 40px;
-  width: 100%;
-  text-align: center;
-  opacity: 0;
-  transition: 3s;
-  font-size: 1.1rem;
-}
-
-.sound-toggle {
-  position: fixed;
-  top: 25px;
-  right: 25px;
-  font-size: 22px;
-  cursor: pointer;
-  z-index: 1000;
-}
-
-canvas {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  }
