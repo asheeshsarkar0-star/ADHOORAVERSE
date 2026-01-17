@@ -3,40 +3,40 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ADHOORAVERSE — Final</title>
+<title>ADHOORAVERSE</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<section class="scene active">
+<!-- ENTRY SCREEN -->
+<section id="entry" class="screen active">
   <h1>ADHOORAVERSE</h1>
-  <p>Before you go further…</p>
-  <p>leave your name behind.</p>
-
-  <input type="text" id="username" placeholder="Your name..." />
-  <button id="continueBtn">Continue</button>
+  <p class="tagline">Luxury begins where noise ends.</p>
+  <button id="enterBtn">ENTER</button>
 </section>
 
-<section class="scene" id="personalScene">
-  <p id="personalText"></p>
-  <button id="musicBtn">🎧 Unlock the Silence</button>
+<!-- STORY SCREEN -->
+<section id="story" class="screen">
+  <p class="line">Tum yahan tak aa gaye ho…</p>
+  <p class="line">iska matlab kuch adhoora hai.</p>
+
+  <p class="line gold">न शान्तिः — न पूर्णता</p>
+
+  <p class="line">Scroll slowly.</p>
 </section>
 
-<section class="scene final">
+<!-- FINAL SCREEN -->
+<section id="final" class="screen">
   <div class="card">
     <p>
-      “Adhoorapan is not a flaw.<br>
-      It is proof that you felt something real.”
+      Adhoorapan is not a flaw.<br><br>
+      It is proof that you felt something real.
     </p>
   </div>
 </section>
-
-<audio id="bgMusic" loop>
-  <source src="https://cdn.pixabay.com/audio/2022/03/15/audio_4b9a9c5b12.mp3" type="audio/mpeg">
-</audio>
 
 <script src="script.js"></script>
 </body>
