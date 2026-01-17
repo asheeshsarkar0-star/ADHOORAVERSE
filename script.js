@@ -1,14 +1,14 @@
 const btn = document.getElementById("enterBtn");
-const msg = document.getElementById("message");
+const whisper = document.getElementById("whisper");
 
 btn.addEventListener("click", () => {
-  msg.style.opacity = 1;
+  whisper.style.opacity = 1;
 
   setTimeout(() => {
-    msg.innerHTML = "Tum jawab nahi… bas ehsaas dhoondhne aaye ho.";
+    whisper.innerHTML = "Yahan shor nahi hota… sirf ehsaas hota hai.";
   }, 3000);
 
   setTimeout(() => {
-    msg.innerHTML = "Welcome to the Adhooraverse.";
+    whisper.innerHTML = "Welcome to the luxury of being incomplete.";
   }, 6000);
 });
