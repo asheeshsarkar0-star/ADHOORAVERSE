@@ -10,6 +10,20 @@ body {
   overflow: hidden;
   color: #f5e6b8;
   font-family: 'Montserrat', sans-serif;
+  cursor: none;
+}
+
+/* luxury glow cursor */
+.cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(212,175,55,0.6);
+  pointer-events: none;
+  box-shadow: 0 0 20px rgba(212,175,55,0.8);
+  transform: translate(-50%, -50%);
+  z-index: 9999;
 }
 
 .luxury-bg {
@@ -43,7 +57,7 @@ h1 {
 .tagline {
   margin-top: 15px;
   font-size: 1.1rem;
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 button {
@@ -72,3 +86,18 @@ button:hover {
   transition: 3s;
   font-size: 1.1rem;
 }
+
+.sound-toggle {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+canvas {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  }
