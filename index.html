@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ADHOORAVERSE — A Cinematic Story</title>
+<title>ADHOORAVERSE — Final</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
@@ -11,31 +11,32 @@
 
 <body>
 
-<canvas id="particles"></canvas>
-
 <section class="scene active">
   <h1>ADHOORAVERSE</h1>
-  <p>Scroll… slowly.</p>
+  <p>Before you go further…</p>
+  <p>leave your name behind.</p>
+
+  <input type="text" id="username" placeholder="Your name..." />
+  <button id="continueBtn">Continue</button>
 </section>
 
-<section class="scene">
-  <p>तुम आए हो…</p>
-  <p>पर जाने के लिए नहीं।</p>
-</section>
-
-<section class="scene">
-  <p>हर किसी के पास सब कुछ होता है…</p>
-  <p>पर सुकून नहीं।</p>
-</section>
-
-<section class="scene">
-  <p class="sanskrit">न शान्तिः, न पूर्णता…</p>
+<section class="scene" id="personalScene">
+  <p id="personalText"></p>
+  <button id="musicBtn">🎧 Unlock the Silence</button>
 </section>
 
 <section class="scene final">
-  <p>अधूरा रहना कमज़ोरी नहीं…</p>
-  <p>ये पहचान है।</p>
+  <div class="card">
+    <p>
+      “Adhoorapan is not a flaw.<br>
+      It is proof that you felt something real.”
+    </p>
+  </div>
 </section>
+
+<audio id="bgMusic" loop>
+  <source src="https://cdn.pixabay.com/audio/2022/03/15/audio_4b9a9c5b12.mp3" type="audio/mpeg">
+</audio>
 
 <script src="script.js"></script>
 </body>
