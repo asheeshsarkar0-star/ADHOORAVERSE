@@ -1,60 +1,67 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   background: #050508;
   color: #f5e6b8;
   font-family: 'Playfair Display', serif;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
-.scene {
+.screen {
   height: 100vh;
-  display: flex;
+  width: 100%;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  opacity: 0;
-  transition: 1.5s;
+  padding: 30px;
 }
 
-.scene.active {
-  opacity: 1;
+.screen.active {
+  display: flex;
 }
 
 h1 {
-  font-size: 4rem;
   color: #d4af37;
   letter-spacing: 8px;
+  font-size: 3rem;
 }
 
-input {
-  margin-top: 30px;
-  padding: 12px 30px;
-  background: transparent;
-  border: 1px solid #d4af37;
-  color: #d4af37;
-  font-size: 1rem;
-  outline: none;
+.tagline {
+  margin-top: 15px;
+  opacity: 0.8;
 }
 
 button {
-  margin-top: 25px;
-  padding: 12px 40px;
-  background: transparent;
-  border: 1px solid #d4af37;
-  color: #d4af37;
+  margin-top: 40px;
+  padding: 14px 50px;
+  background: #d4af37;
+  border: none;
+  color: #050508;
+  font-weight: bold;
+  letter-spacing: 2px;
   cursor: pointer;
-  transition: 0.4s;
+  box-shadow: 0 0 30px rgba(212,175,55,0.6);
 }
 
-button:hover {
-  background: #d4af37;
-  color: #050508;
+.line {
+  font-size: 1.5rem;
+  margin: 15px 0;
+}
+
+.gold {
+  color: #d4af37;
+  font-size: 2rem;
 }
 
 .card {
   border: 1px solid #d4af37;
-  padding: 50px;
+  padding: 40px;
   max-width: 700px;
   box-shadow: 0 0 40px rgba(212,175,55,0.3);
   font-size: 1.6rem;
