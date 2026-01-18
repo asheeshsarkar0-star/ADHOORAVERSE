@@ -1,8 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
   background: #050508;
@@ -11,19 +7,28 @@ body {
   overflow: hidden;
 }
 
+#loader {
+  position: fixed;
+  inset: 0;
+  background: #050508;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  z-index: 999;
+}
+
+.hidden { display: none; }
+
 .screen {
   height: 100vh;
   width: 100%;
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 30px;
-}
-
-.screen.active {
-  display: flex;
 }
 
 h1 {
@@ -32,37 +37,43 @@ h1 {
   font-size: 3rem;
 }
 
-.tagline {
-  margin-top: 15px;
-  opacity: 0.8;
-}
+.tagline { opacity: .8; margin-top: 10px; }
 
 button {
-  margin-top: 40px;
-  padding: 14px 50px;
+  margin-top: 30px;
+  padding: 14px 45px;
   background: #d4af37;
   border: none;
   color: #050508;
-  font-weight: bold;
   letter-spacing: 2px;
   cursor: pointer;
-  box-shadow: 0 0 30px rgba(212,175,55,0.6);
+  box-shadow: 0 0 25px rgba(212,175,55,.6);
 }
 
-.line {
-  font-size: 1.5rem;
-  margin: 15px 0;
-}
-
-.gold {
+input {
+  background: transparent;
+  border: 1px solid #d4af37;
   color: #d4af37;
-  font-size: 2rem;
+  padding: 12px 25px;
+  margin-top: 20px;
 }
+
+.line { font-size: 1.5rem; margin: 15px 0; }
+.gold { color: #d4af37; font-size: 2rem; }
+.small { font-size: 1rem; opacity: .6; }
 
 .card {
   border: 1px solid #d4af37;
   padding: 40px;
   max-width: 700px;
-  box-shadow: 0 0 40px rgba(212,175,55,0.3);
+  box-shadow: 0 0 40px rgba(212,175,55,.4);
   font-size: 1.6rem;
+}
+
+#musicBtn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 1000;
 }
