@@ -5,36 +5,49 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ADHOORAVERSE</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- ENTRY SCREEN -->
-<section id="entry" class="screen active">
+<!-- LOADING -->
+<div id="loader">
+  <p>Entering silence…</p>
+</div>
+
+<!-- MUSIC -->
+<div id="musicBtn">🎧</div>
+<audio id="bgMusic" loop>
+  <source src="https://cdn.pixabay.com/audio/2022/03/15/audio_4b9a9c5b12.mp3" type="audio/mpeg">
+</audio>
+
+<!-- ENTRY -->
+<section id="entry" class="screen hidden">
   <h1>ADHOORAVERSE</h1>
   <p class="tagline">Luxury begins where noise ends.</p>
   <button id="enterBtn">ENTER</button>
 </section>
 
-<!-- STORY SCREEN -->
-<section id="story" class="screen">
-  <p class="line">Tum yahan tak aa gaye ho…</p>
-  <p class="line">iska matlab kuch adhoora hai.</p>
-
-  <p class="line gold">न शान्तिः — न पूर्णता</p>
-
-  <p class="line">Scroll slowly.</p>
+<!-- NAME -->
+<section id="nameScreen" class="screen hidden">
+  <p>Before you continue…</p>
+  <input id="username" placeholder="Your name…" />
+  <button id="continueBtn">Continue</button>
 </section>
 
-<!-- FINAL SCREEN -->
-<section id="final" class="screen">
+<!-- STORY -->
+<section id="story" class="screen hidden">
+  <p class="line">Tum yahan tak aa gaye ho…</p>
+  <p class="line">iska matlab kuch adhoora hai.</p>
+  <p class="line gold">न शान्तिः — न पूर्णता</p>
+  <p class="line small">Scroll slowly.</p>
+</section>
+
+<!-- FINAL -->
+<section id="final" class="screen hidden">
   <div class="card">
-    <p>
-      Adhoorapan is not a flaw.<br><br>
-      It is proof that you felt something real.
-    </p>
+    <p id="finalText"></p>
   </div>
 </section>
 
